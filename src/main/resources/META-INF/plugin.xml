@@ -1,11 +1,10 @@
 <idea-plugin>
     <id>com.github.pflingstring.push_me_not</id>
-    <name>Plugin display name here</name>
-    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+    <name>push me not</name>
+    <vendor email="nzaporojan@gmail.com" url="https://github.com/pflingstring">pflingstring</vendor>
 
     <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
+    Hides the "Commit and Push..." button introduced in 2020.3
     ]]></description>
 
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
