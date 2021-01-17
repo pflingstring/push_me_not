@@ -7,15 +7,20 @@
     Hides the "Commit and Push..." button introduced in 2020.3
     ]]></description>
 
-    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-         on how to target different products -->
-    <depends>com.intellij.modules.platform</depends>
+    <depends>Git4Idea</depends>
+
+    <idea-version since-build="203.6682" until-build="203.*"/>
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
     </extensions>
 
     <actions>
-        <!-- Add your actions here -->
+        <action id="Git.Commit.And.Push.Executor"
+                class="com.github.pflingstring.push.me.not.HidePushButtonExecutorAction"
+                overrides="true">
+            <add-to-group group-id="Vcs.Commit.PrimaryCommitActions"/>
+            <keyboard-shortcut first-keystroke="control alt K" keymap="$default"/>
+        </action>
     </actions>
 </idea-plugin>
