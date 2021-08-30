@@ -5,16 +5,16 @@ plugins {
 }
 
 group = "com.github.pflingstring.push.me.not"
-version = "0.0.1"
+version = "0.0.2"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation(kotlin("stdlib"))
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.5.21")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.2")
 }
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
@@ -24,8 +24,8 @@ intellij {
     sameSinceUntilBuild.set(true)
 }
 
-val eapIdePath = properties["eap.ide.path"]!!
-val stableIdePath = properties["stable.ide.path"]!!
+val eapIdePath = properties["eap.ide.path"]
+val stableIdePath = properties["stable.ide.path"]
 
 tasks {
     patchPluginXml {
