@@ -24,8 +24,8 @@ intellij {
     sameSinceUntilBuild.set(true)
 }
 
-val eapIdePath = properties["eap.ide.path"]
-val stableIdePath = properties["stable.ide.path"]
+val eapIdePath = properties["eap.ide.path"]!!
+val stableIdePath = properties["stable.ide.path"]!!
 
 tasks {
     patchPluginXml {
