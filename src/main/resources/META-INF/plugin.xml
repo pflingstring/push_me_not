@@ -8,13 +8,9 @@
     Hides the "Commit and Push..." button introduced in 2020.3
     ]]></description>
 
-    <depends>Git4Idea</depends>
-
     <idea-version since-build="203.6682"/>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
-    </extensions>
+    <extensions defaultExtensionNs="com.intellij"></extensions>
 
     <actions>
         <unregister id="Git.Commit.And.Push.Executor"/>
