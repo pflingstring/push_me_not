@@ -19,13 +19,14 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    pluginName.set(provider { "$project.name" })
-    version.set("2020.3.1")
     plugins.set(listOf("git4idea"))
+    updateSinceUntilBuild.set(false)
+    sameSinceUntilBuild.set(true)
 }
 
 tasks {
     patchPluginXml {
+        sinceBuild.set("203.6682")
         changeNotes.set("""""".trimIndent())
     }
     runPluginVerifier {
