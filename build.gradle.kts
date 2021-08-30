@@ -24,13 +24,16 @@ intellij {
     sameSinceUntilBuild.set(true)
 }
 
+val eapIdePath = properties["eap.ide.path"]!!
+val stableIdePath = properties["stable.ide.path"]!!
+
 tasks {
     patchPluginXml {
         sinceBuild.set("203.6682")
         changeNotes.set("""""".trimIndent())
     }
     runPluginVerifier {
-        localPaths.setFrom("")
+        localPaths.setFrom(eapIdePath, stableIdePath)
     }
 }
 tasks.getByName<Test>("test") {
