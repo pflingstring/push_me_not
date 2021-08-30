@@ -16,11 +16,6 @@
     </extensions>
 
     <actions>
-        <action id="Git.Commit.And.Push.Executor"
-                class="com.github.pflingstring.push.me.not.HidePushButtonExecutorAction"
-                overrides="true">
-            <add-to-group group-id="Vcs.Commit.PrimaryCommitActions"/>
-            <keyboard-shortcut first-keystroke="control alt K" keymap="$default"/>
-        </action>
+        <unregister id="Git.Commit.And.Push.Executor"/>
     </actions>
 </idea-plugin>
