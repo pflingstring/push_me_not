@@ -1,5 +1,6 @@
 <idea-plugin>
     <id>com.github.pflingstring.push_me_not</id>
+    <!--suppress PluginXmlCapitalization -->
     <name>push me not</name>
     <vendor email="nzaporojan@gmail.com" url="https://github.com/pflingstring">pflingstring</vendor>
 
@@ -8,6 +9,7 @@
     ]]></description>
 
     <depends>Git4Idea</depends>
+    <!--    <depends>com.intellij.modules.platform</depends>-->
 
     <idea-version since-build="203.6682"/>
 
