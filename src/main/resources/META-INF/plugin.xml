@@ -1,5 +1,6 @@
 <idea-plugin>
     <id>com.github.pflingstring.push_me_not</id>
+    <!--suppress PluginXmlCapitalization -->
     <name>push me not</name>
     <vendor email="nzaporojan@gmail.com" url="https://github.com/pflingstring">pflingstring</vendor>
 
@@ -7,20 +8,11 @@
     Hides the "Commit and Push..." button introduced in 2020.3
     ]]></description>
 
-    <depends>Git4Idea</depends>
+    <idea-version since-build="203.6682"/>
 
-    <idea-version since-build="203.6682" until-build="203.*"/>
-
-    <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
-    </extensions>
+    <extensions defaultExtensionNs="com.intellij"></extensions>
 
     <actions>
-        <action id="Git.Commit.And.Push.Executor"
-                class="com.github.pflingstring.push.me.not.HidePushButtonExecutorAction"
-                overrides="true">
-            <add-to-group group-id="Vcs.Commit.PrimaryCommitActions"/>
-            <keyboard-shortcut first-keystroke="control alt K" keymap="$default"/>
-        </action>
+        <unregister id="Git.Commit.And.Push.Executor"/>
     </actions>
 </idea-plugin>
